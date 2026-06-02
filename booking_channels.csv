@@ -1,0 +1,27 @@
+channel_id,market_segment,distribution_channel
+BC001,Direct,Direct
+BC002,Corporate,Corporate
+BC003,Online TA,TA/TO
+BC004,Offline TA/TO,TA/TO
+BC005,Complementary,Direct
+BC006,Direct,TA/TO
+BC007,Groups,Direct
+BC008,Groups,Corporate
+BC009,Offline TA/TO,Direct
+BC010,Groups,TA/TO
+BC011,Corporate,Direct
+BC012,Complementary,TA/TO
+BC013,Complementary,Corporate
+BC014,Direct,Corporate
+BC015,Corporate,TA/TO
+BC016,Online TA,Direct
+BC017,Online TA,Corporate
+BC018,Direct,Undefined
+BC019,Offline TA/TO,Corporate
+BC020,Undefined,Undefined
+BC021,Online TA,Undefined
+BC022,Online TA,GDS
+BC023,Aviation,Corporate
+BC024,Offline TA/TO,GDS
+BC025,Aviation,TA/TO
+BC026,Direct,GDS
