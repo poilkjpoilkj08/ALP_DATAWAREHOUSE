@@ -1,15 +1,24 @@
-Welcome to your new dbt project!
+# 🏨 Hotel Booking Demand Data Warehouse
 
-### Using the starter project
+## Kelompok
 
-Try running the following commands:
-- dbt run
-- dbt test
+| NIM           | Nama                           |
+| ------------- | ------------------------------ |
+| 0706022410010 | Lennard Lucius Huang           |
+| 0706022410025 | Maxwell Ethan Muliadi          |
+| 0706022410030 | Stephen Jonathan Onggowarsitto |
+| 0706022410036 | Matthew Iyawan                 |
 
+---
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+## 📖 Project Overview
+
+Project ini merupakan implementasi Data Warehouse menggunakan pendekatan Modern ELT (Extract, Load, Transform) untuk mengolah data pemesanan hotel dari berbagai sumber operasional menjadi model analitik berbentuk Star Schema yang siap digunakan untuk kebutuhan Business Intelligence (BI) dan dashboard analitik.
+
+Dataset yang digunakan adalah:
+
+**Scenario 05 – Hotel Booking Demand** sesuai dengan ketentuan AFL-3 & ALP Mata Kuliah Data Warehousing.
+
+Sumber data terdiri dari kombinasi data MySQL dan CSV yang merepresentasikan aktivitas pemesanan hotel, data referensi negara, hotel, tipe kamar, dan channel pemesanan.
+
+---

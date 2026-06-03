@@ -2,7 +2,7 @@
 
 ## Kelompok
 
-| NRP           | Nama                           |
+| NIM           | Nama                           |
 | ------------- | ------------------------------ |
 | 0706022410010 | Lennard Lucius Huang           |
 | 0706022410025 | Maxwell Ethan Muliadi          |
