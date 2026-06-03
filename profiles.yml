@@ -1,0 +1,14 @@
+dbt_hotel_model:
+  outputs:
+    dev:
+      dataset: afl3_hotel_dwh
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: /root/.gcp/bigquery-service-account.json
+      location: asia-southeast2
+      method: service-account
+      priority: interactive
+      project: afl3-dw-hotel
+      threads: 4
+      type: bigquery
+  target: dev

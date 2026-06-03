@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  data_engineering_env:
+    build: .
+    container_name: afl3_de_container
+    ports:
+      - "8888:8888"
+      - "8081:8081"
+    volumes:
+      # Sinkronisasi folder lokal ke dalam container
+      - .:/usr/app
+      # Sinkronisasi folder rahasia untuk kredensial GCP
+      - ./.secrets:/root/.gcp
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/root/.gcp/bigquery-service-account.json

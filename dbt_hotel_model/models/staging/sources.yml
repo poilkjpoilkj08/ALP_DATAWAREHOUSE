@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: hotel_raw_source
+    database: afl3-dw-hotel  
+    schema: afl3_hotel_raw   
+    tables:
+      - name: bookings
+      - name: hotels
+      - name: room_types
+      - name: booking_channels
+      - name: countries

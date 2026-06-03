@@ -1,0 +1,4 @@
+.secrets/
+dbt_hotel_model/logs/
+dbt_hotel_model/target/
+dbt_hotel_model/dbt_packages/

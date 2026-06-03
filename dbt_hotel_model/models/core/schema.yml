@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: fact_bookings
+    description: "Tabel fact yang menyimpan seluruh data transaksi pemesanan hotel beserta metrik kalkulasi finansial dan segmentasi konsumen."
+    columns:
+      - name: booking_id
+        description: "Primary key unik untuk setiap transaksi booking."
+        tests:
+          - unique
+          - not_null
+
+      - name: hotel_id
+        description: "Foreign key yang menghubungkan transaksi ke dim hotel."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_hotels')
+              field: hotel_id
+
+      - name: country_code
+        description: "Foreign key yang menghubungkan negara asal tamu ke dim negara."
+        tests:
+          - relationships:
+              to: ref('dim_countries')
+              field: country_code
+
+      - name: estimated_revenue
+        description: "Estimasi pendapatan total dari kamar (Total Malam Menginap dikali Average Daily Rate)."
+
+      - name: guest_segment
+        description: "Segmentasi konsumen berdasarkan jumlah orang yang menginap: Solo, Couple, Family, atau Group."
+
+  - name: dim_hotels
+    description: "Tabel dim master untuk data hotel."
+    columns:
+      - name: hotel_id
+        tests:
+          - unique
+          - not_null
