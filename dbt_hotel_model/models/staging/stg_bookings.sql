@@ -7,7 +7,10 @@ select
     cast(booking_id as STRING) as booking_id,
     cast(hotel_id as STRING) as hotel_id,
     cast(channel_id as STRING) as channel_id,
-    cast(country_code as STRING) as country_code,
+   CASE 
+        WHEN country_code IS NULL OR country_code = 'NULL' OR TRIM(country_code) = '' THEN NULL
+        ELSE cast(country_code as STRING) 
+    END as country_code,
     
     -- 2. Detail Kamar
     cast(reserved_room_type_code as STRING) as reserved_room_type_code,
