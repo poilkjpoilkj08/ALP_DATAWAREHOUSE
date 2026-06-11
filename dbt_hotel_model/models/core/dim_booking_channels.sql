@@ -1,5 +1,5 @@
 select
     channel_id,
-    market_segment,
-    distribution_channel
+    coalesce(market_segment, 'Unknown') as market_segment,
+    coalesce(distribution_channel, 'Unknown') as distribution_channel
 from {{ ref('stg_booking_channels') }}

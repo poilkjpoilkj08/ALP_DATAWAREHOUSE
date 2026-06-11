@@ -8,7 +8,11 @@ select
     cast(hotel_id as STRING) as hotel_id,
     cast(channel_id as STRING) as channel_id,
    CASE 
-        WHEN country_code IS NULL OR country_code = 'NULL' OR TRIM(country_code) = '' THEN NULL
+        WHEN country_code IS NULL 
+             OR TRIM(country_code) = '' 
+             OR LOWER(TRIM(country_code)) = 'null'
+             OR LOWER(TRIM(country_code)) = 'undefined' 
+        THEN NULL
         ELSE cast(country_code as STRING) 
     END as country_code,
     

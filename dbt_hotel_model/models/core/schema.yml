@@ -15,18 +15,19 @@ models:
         tests:
           - not_null
           - relationships:
-              to: ref('dim_hotels')
-              field: hotel_id
+              arguments:
+                to: ref('dim_hotels')
+                field: hotel_id
 
       - name: country_code
         description: "Foreign key yang menghubungkan negara asal tamu ke dim negara."
         tests:
           - relationships:
-              to: ref('dim_countries')
-              field: country_code
               config:
-                  severity: warn
-
+                severity: warn
+              arguments:
+                to: ref('dim_countries')
+                field: country_code
 
       - name: estimated_revenue
         description: "Estimasi pendapatan total dari kamar (Total Malam Menginap dikali Average Daily Rate)."

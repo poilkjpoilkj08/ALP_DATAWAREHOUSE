@@ -7,8 +7,10 @@ services:
     ports:
       - "8888:8888"
       - "8081:8081"
+      - "8501:8501"
     volumes:
       # Sinkronisasi folder lokal ke dalam container
+      # - .:/usr/appdbt
       - .:/usr/app
       # Sinkronisasi folder rahasia untuk kredensial GCP
       - ./.secrets:/root/.gcp
